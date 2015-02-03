@@ -7,7 +7,7 @@
     <title><%= content_for?(:title) ? yield(:title) : "Oakland Answers" %></title>
     <script src="https://login.persona.org/include.js"></script>
     <script type="text/javascript">
-      var currentUser = <% if session[:email] %>'<%= session[:email] %>'<% else %>null<% end %>;
+      var currentUser = <% if session[:email] %>'<%= session[:email] %>'<% else %> null <% end %>;
     </script>
 
     <%= csrf_meta_tags %>
@@ -49,7 +49,8 @@
         <div class="logo span4">
           <%= link_to "Oakland Answers", root_path, class: "oakland-logo" %>
           <span>
-            <img src="/assets/beta.png" class="beta" alt="beta">
+            <%= image_tag 'beta.png', class:'beta' %>
+
           </span>
         </div>
             <ul class="nav nav-links span5">
@@ -81,11 +82,12 @@
 
     <div id="footer">
         <div class="cfa-logos">
+          <%= link_to image_tag('cfa_logo_footer.png'),"http://codeforamerica.org/", class:"right" %>
           <a href="http://codeforamerica.org/"><img src="/assets/cfa_logo_footer.png" class="right" alt="Code for America" /></a>
           <span class="plus">&#43;</span>
-          <a href="http://openoakland.org/"><img src="/assets/openoaklandlogo.png" class="right" alt="City of Oakland" /></a>
+          <%= link_to image_tag('openoaklandlogo.png'), 'http://openoakland.org/', class: 'right' %>
           <span class="plus">&#43;</span>
-          <a href="http://www2.oaklandnet.com"><img src="/assets/OaklandCityTree.png" class="right" alt="City of Oakland" /></a>
+          <%= link_to image_tag('OaklandCityTree.png'), 'http://openoakland.org/', class: 'right' %>
         </div>
     </div>
 
