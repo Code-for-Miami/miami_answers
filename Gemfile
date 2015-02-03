@@ -38,6 +38,10 @@ gem 'therubyracer'
 gem "twitter-bootstrap-rails"
 gem 'bootsy'
 
+group :production do
+  gem 'rails_12factor'
+end
+
 group :development do
   gem 'guard-spork'
   gem 'pry-rails'
