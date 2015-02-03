@@ -1,7 +1,9 @@
 class PersonaController < ApplicationController
+  require 'requester'
   include Requester
 
   def login
+
     if request.xhr?
       assertion = params["assertion"]
       email = get_identity(assertion)

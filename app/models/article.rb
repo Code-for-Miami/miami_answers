@@ -2,6 +2,7 @@
 include ActionView::Helpers::SanitizeHelper
 require 'facets/enumerable'
 require 'textacular/searchable'
+require 'markdownifier'
 
 class Article < ActiveRecord::Base
   include Markdownifier
