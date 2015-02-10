@@ -4,19 +4,19 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Oakland Answers" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : 'Oakland Answers' %></title>
     <script src="https://login.persona.org/include.js"></script>
     <script type="text/javascript">
-      var currentUser = <% if session[:email] %>'<%= session[:email] %>'<% else %> null <% end %>;
+      var currentUser = '<% session[:email] ?  session[:email] : nil %>';
     </script>
 
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag "application", :media => "all" %>
+    <%= stylesheet_link_tag 'application', :media => 'all' %>
 
     <style>
       body {
-       background:transparent url('<%= ENV["BACKGROUND_IMAGE"] %>') repeat 0 100%;
+       background:transparent url('<%= ENV['BACKGROUND_IMAGE'] %>') repeat 0 100%;
       }
     </style>
 
@@ -82,7 +82,7 @@
 
     <div id="footer">
         <div class="cfa-logos">
-          <%= link_to image_tag('cfa_logo_footer.png'),"http://codeforamerica.org/", class:"right" %>
+          <%= link_to image_tag('cfa_logo_footer.png'), 'http://codeforamerica.org/', class:"right" %>
           <span class="plus">&#43;</span>
           <%= link_to image_tag('openoaklandlogo.png'), 'http://openoakland.org/', class: 'right' %>
           <span class="plus">&#43;</span>
