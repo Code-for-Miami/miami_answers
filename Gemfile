@@ -26,6 +26,8 @@ gem 'gon'
 gem 'dotenv-rails'
 gem 'textacular'
 
+gem 'devise' # User Logins
+
 group :assets do
   gem 'sass-rails', '~> 4.0.3'
   gem 'sprockets', '2.11.0'
