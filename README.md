@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/code-for-miami/miami_answers.png?label=ready&title=Ready)](https://waffle.io/code-for-miami/miami_answers)
 [![Build Status](https://travis-ci.org/codeforamerica/oakland_answers.svg?branch=master)](https://travis-ci.org/codeforamerica/oakland_answers)
 
 # Miami Answers
