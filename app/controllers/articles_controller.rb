@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
-  before_action :require_signin
-  skip_before_action :require_signin, only: [:show, :index]
+  before_action :authenticate_user!, except: [:show, :index]
+
   respond_to :json, :html
 
   def show
@@ -51,9 +51,4 @@ class ArticlesController < ApplicationController
     params.require(:article).permit(:title, :content_main, :title_es, :content_main_es, :title_cn, :content_main_cn, :author_name, :author_link, :category_id, :user)
   end
 
-  def require_signin
-    if current_user.nil?
-      redirect_to root_path
-    end
-  end
 end
