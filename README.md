@@ -1,8 +1,13 @@
 [![Build Status](https://travis-ci.org/codeforamerica/oakland_answers.svg?branch=master)](https://travis-ci.org/codeforamerica/oakland_answers)
 
-# Oakland Answers
+# Miami Answers
 
-Oakland Answers is based on [Honolulu Answers](http://answers.honolulu.gov): a new approach to make it easier for people to navigate city information and services quickly.
+Miami Answers is based on [Oakland Answers](http://answers.oaklandnet.com/): a new approach to make it easier for people to navigate city information and services quickly.
+
+- **Heroku**: https://miamianswers.herokuapp.com
+
+- **Waffle**: https://waffle.io/code-for-miami/miami_answers
+
 
 ## Installation
 
@@ -10,8 +15,8 @@ Oakland Answers is based on [Honolulu Answers](http://answers.honolulu.gov): a n
 
 ## Local Setup
 
-    $ git clone git@github.com:codeforamerica/oakland_answers.git
-    $ cd oakland_answers
+    $ git clone git@github.com:Code-for-Miami/miami_answers.git
+    $ cd miami_answers
     $ rake db:create:all
     $ rake db:migrate
     $ rake db:seed
