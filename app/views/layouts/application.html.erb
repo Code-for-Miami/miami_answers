@@ -51,15 +51,15 @@
         </div>
             <ul class="nav nav-links span5">
               <li><%= link_to "Browse Q&A's", articles_path %></li>
-              <% if @current_user.present? %>
+              <% if current_user.present? %>
                 <li><%= link_to "Create a New Q&A", new_article_path %></li>
               <% end %>
             </ul>
           <form id="sign-in">
-            <% if @current_user.present? %>
-              <input type="button" class="btn" id="signout" value="Sign out">
-            <% else %>
-              <input type="button" class="btn" id="signin" value="Sign in">
+            <% if current_user.present? %>
+              <%= link_to 'Sign Out', sign_out_path , class: 'btn' %>
+          <% else %>
+              <%= link_to 'Sign In', sign_in_path, class: 'btn btn-success' %>
             <% end %>
           </form>
       </div>
