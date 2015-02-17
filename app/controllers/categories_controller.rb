@@ -1,6 +1,5 @@
 class CategoriesController < ApplicationController
-  before_action :require_signin
-  skip_before_action :require_signin, only: [:show, :index]
+  before_action :authenticate_user!, except: [:show, :index]
 
   respond_to :json, :html
   def index
@@ -50,9 +49,4 @@ class CategoriesController < ApplicationController
     params.require(:category).permit(:name, :description, :user)
   end
 
-  def require_signin
-    if current_user.nil?
-      redirect_to root_path
-    end
-  end
 end

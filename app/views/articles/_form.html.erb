@@ -18,7 +18,7 @@
   <%= f.bootsy_area :content_main_cn %>
 
   <%= label_tag "article_category_id", "Category" %>
-  <%= collection_select(:article, :category_id, Category.all, :id, :name, :prompt => 'Please select a category') %>
+  <%= collection_select(:article, :category_id, Category.all.order(name: :asc), :id, :name, :prompt => 'Please select a category') %>
 
   <%= f.label :author_name, "Author Name (optional)" %>
   <%= f.text_field :author_name %>

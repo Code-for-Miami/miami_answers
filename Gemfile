@@ -10,6 +10,9 @@ gem 'foreman'
 gem 'facets', require: false
 gem 'jquery-ui-rails'
 gem 'jquery-rails', '~> 2.3.0'
+gem 'turbolinks'
+gem 'jquery-turbolinks'
+
 
 gem 'memcachier'
 gem 'dalli'
@@ -25,6 +28,8 @@ gem 'friendly_id', '5.0.4'
 gem 'gon'
 gem 'dotenv-rails'
 gem 'textacular'
+
+gem 'devise' # User Logins
 
 group :assets do
   gem 'sass-rails', '~> 4.0.3'

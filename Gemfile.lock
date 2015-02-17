@@ -29,6 +29,7 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.3.6)
     arel (5.0.1.20140414130214)
+    bcrypt (3.1.10)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
@@ -60,6 +61,13 @@ GEM
     childprocess (0.5.3)
       ffi (~> 1.0, >= 1.0.11)
     coderay (1.1.0)
+    coffee-rails (4.0.1)
+      coffee-script (>= 2.2.0)
+      railties (>= 4.0.0, < 5.0)
+    coffee-script (2.3.0)
+      coffee-script-source
+      execjs
+    coffee-script-source (1.9.0)
     commonjs (0.2.7)
     crack (0.4.2)
       safe_yaml (~> 1.0.0)
@@ -67,6 +75,13 @@ GEM
     dalli (2.7.2)
     database_cleaner (1.3.0)
     debug_inspector (0.0.2)
+    devise (3.4.1)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      responders
+      thread_safe (~> 0.1)
+      warden (~> 1.2.3)
     diff-lcs (1.2.5)
     dotenv (0.11.1)
       dotenv-deployment (~> 0.0.2)
@@ -109,6 +124,9 @@ GEM
     jquery-rails (2.3.0)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
+    jquery-turbolinks (2.1.0)
+      railties (>= 3.1.0)
+      turbolinks
     jquery-ui-rails (4.2.1)
       railties (>= 3.2.16)
     json (1.8.1)
@@ -141,6 +159,7 @@ GEM
     multi_json (1.10.1)
     nokogiri (1.6.2.1)
       mini_portile (= 0.6.0)
+    orm_adapter (0.5.0)
     pg (0.17.1)
     polyamorous (1.0.0)
       activerecord (>= 3.0)
@@ -186,6 +205,8 @@ GEM
       ffi (>= 0.5.0)
     ref (1.0.5)
     remotipart (1.2.1)
+    responders (1.1.2)
+      railties (>= 3.2, < 4.2)
     reverse_markdown (0.5.1)
       nokogiri
     rspec-core (3.0.2)
@@ -246,6 +267,8 @@ GEM
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
+    turbolinks (2.5.3)
+      coffee-rails
     twitter-bootstrap-rails (2.2.8)
       actionpack (>= 3.1)
       execjs
@@ -256,6 +279,8 @@ GEM
     uglifier (2.5.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    warden (1.2.3)
+      rack (>= 1.0)
     webmock (1.18.0)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
@@ -274,6 +299,7 @@ DEPENDENCIES
   capybara-webkit
   dalli
   database_cleaner
+  devise
   dotenv-rails
   facets
   factory_girl_rails
@@ -283,6 +309,7 @@ DEPENDENCIES
   gon
   guard-spork
   jquery-rails (~> 2.3.0)
+  jquery-turbolinks
   jquery-ui-rails
   json
   kgio
@@ -307,6 +334,7 @@ DEPENDENCIES
   textacular
   therubyracer
   thin
+  turbolinks
   twitter-bootstrap-rails
   uglifier (>= 1.0.3)
   webmock
