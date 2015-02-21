@@ -31,9 +31,11 @@
           </div>
         </div>
       <% end %>
-      <% if @current_user.present? %>
-        <%= link_to "edit", edit_article_path(@article) %>
+      <% if current_user.present? %>
+        <%= link_to "edit", edit_article_path(@article), class:'btn btn-warning btn-lg' %>
       <% end %>
+
+
     </div>
   </div>
 </div>

@@ -17,7 +17,6 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require jquery.turbolinks
-
 //= require bootsy
 //= require twitter/bootstrap
 //# = require jquery.ui.autocomplete
