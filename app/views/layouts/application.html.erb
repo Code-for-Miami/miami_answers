@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : 'Oakland Answers' %></title>
+    <title><%= content_for?(:title) ? yield(:title) : 'Miami Answers' %></title>
 
     <%= csrf_meta_tags %>
 
@@ -43,7 +43,7 @@
       <div class="navbar-inner">
         <div class="row">
         <div class="logo span4">
-          <%= link_to "Oakland Answers", root_path, class: "oakland-logo" %>
+          <%= link_to "Miami Answers", root_path, class: "miami-logo" %>
           <span>
             <%= image_tag 'beta.png', class:'beta' %>
 
@@ -83,9 +83,6 @@
         <div class="cfa-logos">
           <%= link_to image_tag('cfa_logo_footer.png'), 'http://codeforamerica.org/', class:"right" %>
           <span class="plus">&#43;</span>
-          <%= link_to image_tag('openoaklandlogo.png'), 'http://openoakland.org/', class: 'right' %>
-          <span class="plus">&#43;</span>
-          <%= link_to image_tag('OaklandCityTree.png'), 'http://openoakland.org/', class: 'right' %>
         </div>
     </div>
 
