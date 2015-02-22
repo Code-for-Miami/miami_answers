@@ -1,7 +1,7 @@
-@import url(http://fonts.googleapis.com/css?family=Satisfy);
-@import url(http://fonts.googleapis.com/css?family=Oswald);
-@import url(http://fonts.googleapis.com/css?family=News+Cycle);
-@import url(http://fonts.googleapis.com/css?family=Archivo+Narrow);
+@import url(//fonts.googleapis.com/css?family=Satisfy);
+@import url(//fonts.googleapis.com/css?family=Oswald);
+@import url(//fonts.googleapis.com/css?family=News+Cycle);
+@import url(//fonts.googleapis.com/css?family=Archivo+Narrow);
 
 /* General Styles */
 /* -------------- */
@@ -408,7 +408,6 @@ input:hover#query { }
 .cfa-logos {
   float: right;
   display: block;
-  width: 420px;
   margin: 12px;
 }
 
