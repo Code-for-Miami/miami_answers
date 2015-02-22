@@ -7,4 +7,12 @@ class ApplicationController < ActionController::Base
       CSV.read( "lib/assets/eng_stop.csv" ).flatten
     end
   end
+
+  def authenticate_admin!
+    unless current_user.admin?
+      flash[:error] = "Invlaid Permissions"
+      redirect_to :root # halts request cycle
+    end
+  end
+
 end

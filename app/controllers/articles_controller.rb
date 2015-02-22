@@ -20,7 +20,7 @@ class ArticlesController < ApplicationController
 
   def create
     # All articles will by default be published immediately
-    @article = Article.new(article_params.merge({status: "Published", user: @current_user}))
+    @article = Article.new(article_params.merge({status: "Published", user: current_user}))
     if @article.save
       flash[:success] = "New question and answer successfully created"
       redirect_to article_path(@article)
@@ -36,7 +36,7 @@ class ArticlesController < ApplicationController
 
   def update
     @article = Article.friendly.find(params[:id])
-    if @article.update_attributes(article_params.merge({user: @current_user}))
+    if @article.update_attributes(article_params.merge({user: current_user}))
       flash[:success] = "Question and answer successfully updated"
       redirect_to article_path(@article)
     else
