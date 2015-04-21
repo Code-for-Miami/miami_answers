@@ -18,6 +18,6 @@
 //= require jquery.turbolinks
 //= require bootsy
 //= require twitter/bootstrap
-//# = require jquery.ui.autocomplete
+//= require jquery-ui
 //= require_tree .
 //
